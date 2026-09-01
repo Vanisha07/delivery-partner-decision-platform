@@ -265,3 +265,7 @@ The frontend communicates with the production FastAPI backend through the config
 
 - GitHub: https://github.com/Vanisha07
 - LinkedIn: https://www.linkedin.com/in/vanisha-verma
+
+## 📄 License
+
+This project is licensed under the MIT License.
