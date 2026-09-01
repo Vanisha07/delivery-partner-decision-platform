@@ -2,7 +2,7 @@ import pandas as pd
 from pathlib import Path
 
 
-BASE_DIR = Path(__file__).resolve().parents[3]
+BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_FILE = BASE_DIR / "data" / "delivery_logistics_clean.csv"
 
 
