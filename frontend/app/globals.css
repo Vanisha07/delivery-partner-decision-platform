@@ -1,0 +1,453 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f9;
+  color: #172033;
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+}
+
+button,
+select,
+input {
+  font: inherit;
+}
+
+.dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 42px 32px 80px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 34px;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #667085;
+  margin-bottom: 8px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 42px;
+  letter-spacing: -1.5px;
+}
+
+.header p {
+  margin: 10px 0 0;
+  color: #667085;
+  font-size: 16px;
+}
+
+.status {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 999px;
+  padding: 10px 15px;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #16a34a;
+}
+
+.error {
+  background: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.loading {
+  padding: 80px;
+  text-align: center;
+  color: #667085;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.kpiCard {
+  background: white;
+  border: 1px solid #e7eaf0;
+  border-radius: 12px;
+  padding: 20px;
+  min-height: 125px;
+}
+
+.kpiLabel {
+  color: #667085;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.kpiValue {
+  font-size: 25px;
+  font-weight: 700;
+  margin-top: 13px;
+  letter-spacing: -0.5px;
+}
+
+.kpiSubtitle {
+  color: #98a2b3;
+  font-size: 11px;
+  margin-top: 8px;
+}
+
+.section {
+  background: white;
+  border: 1px solid #e7eaf0;
+  border-radius: 14px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.sectionHeader {
+  margin-bottom: 22px;
+}
+
+.sectionHeader h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.sectionHeader p {
+  color: #667085;
+  margin: 7px 0 0;
+  font-size: 14px;
+}
+
+.recommendationGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.recommendationCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 11px;
+  padding: 19px;
+}
+
+.regionName {
+  font-size: 11px;
+  color: #667085;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.recommendedPartner {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 12px 0 8px;
+  text-transform: capitalize;
+}
+
+.score {
+  font-size: 12px;
+  color: #667085;
+}
+
+.score strong {
+  color: #172033;
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.metricLabel {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  color: #98a2b3;
+}
+
+.metricValue {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-size: 11px;
+  color: #667085;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 13px 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+td {
+  padding: 15px 12px;
+  font-size: 13px;
+  border-bottom: 1px solid #f0f1f3;
+}
+
+.partnerCell {
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.good {
+  color: #15803d;
+  font-weight: 700;
+}
+
+.bad {
+  color: #dc2626;
+  font-weight: 600;
+}
+
+.regionGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.regionCard {
+  border: 1px solid #e5e7eb;
+  border-radius: 11px;
+  padding: 18px;
+}
+
+.regionTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.regionTop h3 {
+  margin: 0;
+  text-transform: capitalize;
+  font-size: 17px;
+}
+
+.regionTop span {
+  font-size: 10px;
+  color: #667085;
+}
+
+.barContainer {
+  height: 7px;
+  background: #edf0f4;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 18px 0;
+}
+
+.bar {
+  height: 100%;
+  background: #172033;
+  border-radius: 10px;
+}
+
+.regionStats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.simulator {
+  background: #172033;
+  color: white;
+  border: none;
+}
+
+.simulator .eyebrow,
+.simulator .sectionHeader p,
+.simulator .metricLabel {
+  color: #aeb7c8;
+}
+
+.simulator .sectionHeader h2 {
+  color: white;
+}
+
+.simulationControls {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) auto;
+  gap: 14px;
+  align-items: end;
+}
+
+.simulationControls label {
+  font-size: 11px;
+  color: #aeb7c8;
+  font-weight: 600;
+}
+
+select {
+  display: block;
+  width: 100%;
+  margin-top: 7px;
+  padding: 11px;
+  border-radius: 8px;
+  border: 1px solid #39445a;
+  background: #222d42;
+  color: white;
+}
+
+.rangeRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.rangeRow input {
+  width: 100%;
+}
+
+.rangeRow strong {
+  min-width: 35px;
+  color: white;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px 19px;
+  background: white;
+  color: #172033;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.simulationResult {
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid #39445a;
+}
+
+.simulationTitle {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.simulationSummary {
+  margin-top: 8px;
+  color: #cbd2df;
+  font-size: 13px;
+}
+
+.resultGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.resultCard {
+  background: #222d42;
+  border: 1px solid #39445a;
+  border-radius: 10px;
+  padding: 18px;
+}
+
+.resultValue {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.positive {
+  color: #86efac;
+}
+
+.negative {
+  color: #fca5a5;
+}
+
+@media (max-width: 1100px) {
+  .kpiGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .recommendationGrid,
+  .regionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .simulationControls {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard {
+    padding: 25px 15px;
+  }
+
+  .header {
+    display: block;
+  }
+
+  .status {
+    display: inline-flex;
+    margin-top: 18px;
+  }
+
+  .header h1 {
+    font-size: 32px;
+  }
+
+  .kpiGrid,
+  .recommendationGrid,
+  .regionGrid,
+  .simulationControls,
+  .resultGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 18px;
+  }
+}
